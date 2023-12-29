@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <title>Manifesto de peso e balanceamento - Cessna 152</title>
+</head>
+<body>
+
+    <div class="squarecontainer">
+
+        <div class="square">
+
+            <div class="quadradoautonomia">
+
+                <div class="opssao">
+                    <div class="opssaobotao">
+                        <div class="quadriculo"></div>
+                        <div class="quadriculo"></div>
+                        <div class="quadriculo"></div>
+                    </div>
+                        <div class="quadriculocomasopssao"> 
+                            <a href="img.html" target="_blank"> <div class="opssao1"></div> </a> 
+                        </div>
+                </div>
+                    
+
+                <div class="titel">
+                    <h1>cálculo de autonomia</h1>
+                </div>
+
+                <div class="autonomiasemtitulo">
+                    <div class="linhadosnome" id="linhadosnomeauto">
+
+                        <div>&nbsp;</div>
+
+                        <div class="retangulonome">etapa</div>
+                        <div class="retangulonome">alternado</div>
+                        <div class="retangulonome">reserva</div>
+
+                        <div class="retangulonome">mínimo</div>
+
+                        <div class="retangulonome">adicional</div>
+
+                        <div class="retangulonome">total</div>
+
+                    </div>
+
+                    <div class="linhadosinput">
+
+                        <div class="titulosinput">Tempo (HH:MM) Combust.(lts)</div>
+
+                        <div><input type="text" placeholder="01:00" id="inputetapahora"> <input type="text" id="inputetapacomb"></div> 
+                        <div><input type="text" id="inputalternadohora"> <input type="text" id="inputalternadocomb"></div> 
+                        <div><input type="text" id="inputreservahora"> <input type="text" id="inputreservacomb"></div> 
+
+                        <!--   mínimo requerido   --><div> <input type="text" class="inputvalor" id="minimohora" readonly> <input type="number" class="inputvalor" id="minimocomb" readonly></div>
+
+                        <div><input type="text" id="inputadicionalhora"> <input type="text" id="inputadicionalcomb"></div>
+
+                        <!--   total abordo   --><div><input type="text" class="inputvalor" id="totalhora" readonly> <input type="text" class="inputvalor" id="totalcomb" readonly></div>
+
+                        <div><input type="text" class="inputvalor" id="pesokg" value="Peso(Kg):" readonly> <input type="text" class="inputvalor" id="totalkg" readonly></div>
+
+                        <div class="info">
+                            <div class="infosquare">
+                                <div class="infosquareinfst"></div>
+                                <div class="infosquareinfst2"></div>
+                            </div>
+                            <div class="infosquare" id="infosquarei" onmouseover="aparecerinfo()" onmouseleave="sumirinfo()">
+                                <div class="i">
+                                    <div>
+                                        i
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="infosquare">
+                                <div class="infosquarein"></div>
+                                <div class="infosquarein2"></div>
+                            </div>
+                        </div>
+
+                        <div class="infotext" id="infoid">
+
+                           
+
+                            <div class="seta"></div>
+
+                            <div class="columntext">
+                                Can choose one column to fill
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        <!-- //////////////////////////////////////////  peso de decolagem  //////////////////////////////////////// --> 
+
+
+            <div class="quadradodecolagem">
+                <div>
+
+                    <div class="titel">
+                        <h2>peso de decolagem</h2>
+                    </div>
+
+                    <div class="autonomiasemtitulo">
+                        <div class="linhadosnome">
+                            <div class="retangulonome">peso max decolagem</div>
+                            <div class="retangulonome">peso básico vazio (pbv)</div>
+                            <div class="retangulonome">peso disponível total</div> 
+                            <div class="retangulonome">min combustível requerido</div>
+                            <div class="retangulonome">peso tripulante</div>
+                            <div class="retangulonome">carga paga máxima</div>
+                        </div>
+
+
+                        <div class="linhadosinput">
+                            <!--   peso max de decolagem   --> <div><input type="text" value="757" class="inputvalor" id="757" readonly></div>
+
+                            <div><input type="text" id="pbv"></div>
+
+                            <!--   peso disponível total   --> <div><input type="text" class="inputvalor" id="disponiveltotal" readonly></div>
+
+                            <div><input type="text" class="inputvalor" id="mincombreq"  ></div>      
+                            <div><input type="text" id="pesotripulante"></div>
+
+                            <!--   carga paga máxiam   --> <div><input type="text" class="inputvalor" id="cargapagamax" readonly></div>
+
+                            <button class="botaoverificacao" onclick="verificarmaster()" onmouseover="aparissaodacaixa()" onmouseleave="sumissodacaixa()" >Verificar</button>
+                            <button onclick="tstval()" class="botaoreset"  onmouseover="aparissaodacaixa2()" onmouseleave="sumissodacaixa2()">  TST VAL  </button>
+                            <div onclick="reset()" class="botaoreset" id="tstvalbtn"  onmouseover="aparissaodacaixa3()" onmouseleave="sumissodacaixa3()"> <div class="imgreset"></div> </div>
+
+                            <div id="caixa">Verificar resultados</div>
+                            <div id="caixa2">Valores de teste</div>
+                            <div id="caixa3">Reset</div>
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////  peso e balanceamento  //////////////////////////////////////// --> 
+
+
+
+
+            <div class="quadradobalanceamento">
+
+                <div class="titel">
+                    <h3>peso e balanceamento</h3>
+                </div>
+
+
+                <div class="autonomiasemtitulo">
+                    <div class="linhadosnome" id="linhadosnomepeso">
+                        
+                        <div class="retangulonome">peso básico vazio (pbv)</div>
+                        <div class="retangulonome">ocupantes</div>
+                        <div class="retangulonome">bagageiro</div>
+                        <div class="retangulonome">peso zero combustível</div>
+                        <div class="retangulonome">combustível</div>
+                        <div class="retangulonome">peso decolagem</div>
+                        <div class="retangulonome">combustível da etapa</div>
+                        <div class="retangulonome">peso de pouso (Max.:757)</div>
+                    </div>
+
+                    <div class="linhadosinput">
+
+                        <div class="titulosinput">  <div class="titulosinputea">Peso (Kg)</div>   <div class="titulosinputea">Braço (M)</div>  <div class="titulosinputea">Momento<p></p>(Kg x M)</div>       </div>
+
+                        <div><input type="text" value="" class="inputvalor" id="pbvkg"> <input type="text" id="pbvm"> <input type="text" class="inputvalor" id="pbvmomento"></div> 
+                        <div><input type="text" value="" class="inputvalor" id="ocupantekg"> <input type="text" class="inputvalor" value="0.990" id="ocupantesjavalorado1" readonly> <input type="text" class="inputvalor" id="ocupantemomento"></div> 
+                        <div><input type="text" value="" id="bagageirokg"> <input type="text" class="inputvalor" value="1.620" id="ocupantesjavalorado2" readonly> <input type="text" class="inputvalor" id="bagageiromomento"></div> 
+
+                        <!--   peso zero combustível   -->  <div><input type="text" value="" class="inputvalor" id="pesozerocombkg" readonly> <input type="text" class="inputvalor" id="pesozerocombm" readonly> <input type="text" class="inputvalor" id="pesozerocombmomento" readonly></div> 
+
+                        <div><input type="text" value="" class="inputvalor" id="combkg"> <input type="text" value="1" class="inputvalor" id="combjavalorado1" readonly> <input type="text" class="inputvalor" id="combmomento"></div> 
+
+                        <!--   peso decolagem   -->  <div><input type="text" value="" class="inputvalor" id="pesodeckg" readonly> <input type="text" class="inputvalor" id="pesodecm" readonly> <input type="text" class="inputvalor" class="inputvalor" id="pesodecmomento" readonly></div> 
+
+                        <div><input type="text" value="" class="inputvalor" id="combetapakg"> <input type="text" value="1" class="inputvalor" id="combjavalorado2" readonly> <input type="text" class="inputvalor" id="combetapamomento"></div> 
+
+                        <!--   peso de pouso  -->  <div><input type="text" value="" class="inputvalor" id="pesopousokg" readonly> <input type="text" class="inputvalor" id="pesopousom" readonly> <input type="text" class="inputvalor" class="inputvalor" id="pesopousomomento" readonly></div> 
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+
+
+          <section class="lgnd">
+            <div class="lgndcont">
+                <div class="lgndquad"></div>   <div>Inserção</div>
+            </div>
+            <div class="lgndcont">
+                <div class="lgndquad" id="lgndquad2"></div>   <div>Resultado / preenchimento não necessário</div>
+            </div>
+          </section>
+
+
+
+        </div>
+        
+
+
+        <div id="grafico">
+
+            <div class="graficimg"></div>
+
+            <div>
+                <canvas id="graficocanv"></canvas>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js.js"></script>
+
+</body>
+</html>
