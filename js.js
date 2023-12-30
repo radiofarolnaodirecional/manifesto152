@@ -27,10 +27,10 @@ function reset(){
     if (inputid !== 'pesokg' && inputid !== '757' && inputid !== 'ocupantesjavalorado1' && inputid !== 'ocupantesjavalorado2' && inputid !== 'combjavalorado1' && inputid !== 'combjavalorado2'){
       inputs[i].value = '';
     }
-      
-    location.reload()
 
   }
+
+  location.reload()
 
 }
 
